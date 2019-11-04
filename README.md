@@ -1,5 +1,11 @@
 # textgame
 
+CRYING BABY
+
+Länk till GitHub = 
+
+Demolänk =  
+
 Spelet jag har gjort går ut på att få bebisen Sture att sluta gråta. 
 Jag har använt mig av funktioner med tillhörande if:s och else:s för 
 att få mitt spel att fungera så jag vill. 
