@@ -2,9 +2,9 @@
 
 CRYING BABY
 
-Länk till GitHub = 
+Länk till GitHub = https://github.com/elinalm/textgame
 
-Demolänk =  
+Demolänk =  https://elinalm.github.io/textgame/
 
 Spelet jag har gjort går ut på att få bebisen Sture att sluta gråta. 
 Jag har använt mig av funktioner med tillhörande if:s och else:s för 
