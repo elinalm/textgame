@@ -1,7 +1,6 @@
 body {
-    background:blue;
+    background: url(crying_baby.jpg);
 }
-
 
 div {
     background: pink;
@@ -13,6 +12,7 @@ div {
     flex-direction:column;
     align-items: center;
     padding:2rem;
+
 }
 
 button {

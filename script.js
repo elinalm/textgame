@@ -53,7 +53,7 @@ function changeDiaper(){
 
     if(isChoiceValid(change, ['torkar', 'jag torkar först', 'torka'])){
         alert('GAME OVER! En god tanke men du tog för lång tid på dig. Sture kissade dig rätt in i munnen att du kvävdes och dog.')
-        firstStatusonBaby()
+        hungryBaby()
     }
 
     else if(isChoiceValid(change, ['jag sätter på en ny blöja', 'ny blöja', 'jag sätter på en ny blöja först', 'blöja', 'en ny blöja först'])){
@@ -96,7 +96,7 @@ function playingBaby(){
 
     if(isChoiceValid(play, ['han vill leka med en pistol', 'leka med en pistol', 'med en pistol', 'pistol'])){
         alert('GAME OVER! Sture sköt precis ihjäl dig. ajdå')
-        firstStatusonBaby()
+        hungryBaby()
     }
 
     else if(isChoiceValid(play, ['råttfällan', 'jag tror att han vill leka med råttfällan', 'han vill leka med råttfällan', 'leka med råttfällan'])){
@@ -106,7 +106,7 @@ function playingBaby(){
 
     else if(isChoiceValid(play, ['jenga', 'han vill spela jenga', 'spela jenga', 'leka med jenga'])){
         alert('GAME OVER! JengaTornet rasade precis över Sture och han dog. Bra jobbat... hur ska du nånsin komma över detta...')
-        firstStatusonBaby()
+        hungryBaby()
     }
 }
 
@@ -119,11 +119,11 @@ function tiredBaby(){
     }
     else if(isChoiceValid(tired, ['slå honom med boken', 'boken', 'jag slår honom med en bok', 'genom att slå honom med en bok'])){
         alert('GAME OVER! Det här är ju absurt, hur kan du ens få vara barnvakt...')
-        firstStatusonBaby()
+        hungryBaby()
     }
     else if(isChoiceValid(tired, ['läsa en bok', 'genom att läsa en bok', 'en bok', 'bok'])){
         alert('GAME OVER! Men Sture är ju förfan döv. Hur ska han kunna höra dig när du läser. Bara för att du inte är döv kan du ju inte läsa en bok bara för att du ska få njuta. Själviskt.')
-        firstStatusonBaby()
+        hungryBaby()
     }
 }
 
@@ -137,17 +137,22 @@ function tiredBabyAgain(){
 
     else if(isChoiceValid(tiredBabyAgain, ['slå honom med boken', 'boken', 'jag slår honom med en bok', 'genom att slå honom med en bok'])){
         alert('GAME OVER! herregud...')
-        firstStatusonBaby()
+        hungryBaby()
     }
 
     else if(isChoiceValid(tiredBabyAgain, ['läsa en bok', 'genom att läsa en bok', 'en bok', 'bok'])){
         alert('GAME OVER! han är ju fortfarande döv...')
+        hungryBaby()
     }
-
 }
 
 function babySleepingAndGameIsWon(){
     alert('Och där klev föräldrarna in i huset och Sture har äntligen somnat. Du kanske får en slant och får gå hem nu. Tackhej')
+    gameIsWon()
+}
+
+function gameIsWon(){
+    alert('DU KLARADET DET! GRATTIS!')
 }
 
 function isChoiceValid(choice, validChoices){
