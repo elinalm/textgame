@@ -16,6 +16,8 @@ function firstStatusonBaby(){
     hungryBaby()
 }
 
+hungryBaby()
+
 function hungryBaby(){
     let choiceOfFood = prompt('Välkommen till köket! Vad tror du Sture vill äta? en sked kanel, mosad banan med kaviar eller eggs benedict ')
     
@@ -52,18 +54,18 @@ function changeDiaper(){
     let change = prompt('Du är nu i badrummet och ska byta blöjan. Den rinniga bajsiga blöjan är av och Sture skriker sig röd i ansiktet på skötbordet. Torkar du först? sätter du på en ny blöja direkt? eller ska han få vara naken?')
 
     if(isChoiceValid(change, ['torkar', 'jag torkar först', 'torka'])){
-        alert('GAME OVER! En god tanke men du tog för lång tid på dig. Sture kissade dig rätt in i munnen att du kvävdes och dog.')
-        hungryBaby()
+        alert('Sture kissade ner dig innan du han torka och få på en ny blöja. Skynda dig nästa gång!')
+        changeDiaperAgain()
     }
 
-    else if(isChoiceValid(change, ['jag sätter på en ny blöja', 'ny blöja', 'jag sätter på en ny blöja först', 'blöja', 'en ny blöja först'])){
+    else if(isChoiceValid(change, ['jag sätter på en ny blöja', 'ny blöja', 'jag sätter på en ny blöja först', 'blöja', 'en ny blöja först', 'blöja först'])){
         alert('Du kan väl ändå inte sätta på en ny blöja innan du har torkat upp bajset...')
         changeDiaperAgain()
     }
 
     else if(isChoiceValid(change, ['han ska få vara naken', 'naken', 'få vara naken', 'jag låter honom vara naken', 'jag låter sture vara naken'])){
         alert('Han fryser ju stackarn!! Och om han är naken kommer han väl ändå bajsa ner hela jävla stället! kom igen nu... STEP IT UP!')
-        babyCriesMoreThanEver()
+        hungryBaby()
     }
 }
 
@@ -77,10 +79,12 @@ function changeDiaperAgain(){
 
     else if(isChoiceValid(changeAgain, ['jag sätter på en ny blöja', 'ny blöja', 'jag sätter på en ny blöja först', 'blöja', 'en ny blöja först'])) {
         alert('GAME OVER! har du hört talas om "man lär sig av sina misstag"? ne tänkte väl det....')
+        hungryBaby()
     }
 
     else if(isChoiceValid(changeAgain, ['han ska få vara naken', 'naken', 'få vara naken', 'jag låter honom vara naken', 'jag låter sture vara naken'])){
         alert('GAME OVER! tur att du inte har några egna barn...')
+        hungryBaby()
     }
 
 }
@@ -99,7 +103,7 @@ function playingBaby(){
         hungryBaby()
     }
 
-    else if(isChoiceValid(play, ['råttfällan', 'jag tror att han vill leka med råttfällan', 'han vill leka med råttfällan', 'leka med råttfällan'])){
+    else if(isChoiceValid(play, ['råttfällan', 'jag tror att han vill leka med råttfällan', 'han vill leka med råttfällan', 'leka med råttfällan', 'råttfälla'])){
         alert('Sture älskar det!! Tänka sig att du kunde lista ut det. Men det roliga varade ej länge. Sture är inte nöjd längre. Han skriker och gråter och får knappt luft. Vill han kanske sova? Ta honom till sovrummet.')
         tiredBaby()
     }
@@ -113,9 +117,9 @@ function playingBaby(){
 function tiredBaby(){
     let tired = prompt('Nu har du burit in Sture i sovrummet och ska få tyst på honom genom att få honom att sova. Hur tänker du lyckas med det? genom att sjunga imse vimse spindel? läsa en bok? eller slå honom med boken?')
 
-    if(isChoiceValid(tired, ['sjunga en vaggvisa', 'sjunga', 'vaggvisa', 'genom att sjunga en vaggvisa'])){
-        alert('GAME OVER! Sture är ju förfan blind! Hur tror du att han ska kunna njuta av en imse vimse spindel då? Du måste ju sjunga en annan låt.')
-        tiredBabyAgain()
+    if(isChoiceValid(tired, ['sjunga imse vimse spindel', 'sjunga', 'imse vimse spindel', 'genom att sjunga imse vimse spindel', 'jag sjunger imse vimse spindel','jag sjunger'])){
+        alert('Sture håller äntligen på att somna, smyg ut ur rummet!')
+        babySleepingAndGameIsWon()
     }
     else if(isChoiceValid(tired, ['slå honom med boken', 'boken', 'jag slår honom med en bok', 'genom att slå honom med en bok'])){
         alert('GAME OVER! Det här är ju absurt, hur kan du ens få vara barnvakt...')
@@ -127,8 +131,8 @@ function tiredBaby(){
     }
 }
 
-function tiredBabyAgain(){
-    let tiredBabyAgain = prompt('Nu försöker vi en gång till. Hur tänker du att du ska natta Sture? Tänker du sjunga en vaggvisa? läsa en bok? eller slå Sture med boken?')
+/*function tiredBabyAgain(){
+    let tiredBabyAgain = prompt('Välj en annan sång och sjung för Sture! ')
     
     if(isChoiceValid(tiredBabyAgain, ['sjunga en vaggvisa', 'sjunga', 'vaggvisa', 'genom att sjunga en vaggvisa'])){
         alert('Titta där du har något bakom pannbenet ändå. Bra val av vaggvisa, Sture håller äntligen på att somna!')
@@ -144,7 +148,7 @@ function tiredBabyAgain(){
         alert('GAME OVER! han är ju fortfarande döv...')
         hungryBaby()
     }
-}
+}*/
 
 function babySleepingAndGameIsWon(){
     alert('Och där klev föräldrarna in i huset och Sture har äntligen somnat. Du kanske får en slant och får gå hem nu. Tackhej')
